@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <a class="highscore-link" href="highscores.html">View Highscores</a>
-        <p class="timer">Time: <span id="timer">80</span></p>
-      </header>
+    
+    <header>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active highscore-link" href="highscores.html">View Highscores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Time: <span id="timer">80</span></a>
+        </li>
+      </ul>
+    </header>
      
-      <div class="card start-page" id="start-page">
+    <main class="wrapper">
+      <section class="card start-page" id="start-page">
         <div class="card-header">
           <h2>Coding Quiz Challenge</h2>
         </div>
@@ -24,9 +33,9 @@
         <div class="card-footer">
           <button id="start" class="btn">Start Quiz</button>
         </div>
-      </div>
+      </section>
 
-      <div id="questions">
+      <section id="questions">
         <div class="card" id="q1">
           <div class="card-header">
             <h2>Question 1</h2>
@@ -111,14 +120,14 @@
           <div class="card-footer">
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="card" id="over">
+      <section class="card" id="over">
         <div class="card-header">
           <h2>All Done!</h2>
         </div>
         <div class="card-body">
-          <p>Your score is <span id="score"></span></p>
+          <p>Your final score is <span id="score"></span></p>
           <form method="POST">
             <div class="input-group">
               <label for="initials">Enter your initials:</label>
@@ -129,9 +138,9 @@
         </div>
         <div class="card-footer">
         </div>
-      </div>
+      </section>
 
-    </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

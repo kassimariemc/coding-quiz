@@ -15,7 +15,7 @@ function startTimer(event) {
     secondsLeft--;
     timerEl.textContent = secondsLeft;
 
-    if(secondsLeft === 0) {
+    if(secondsLeft === 0 || index > 4) {
       clearInterval(timerInterval);
       quizOver();
     }
@@ -47,28 +47,12 @@ function startQuiz(event) {
 // Loop through questions and keep score
 var ansButton = document.querySelectorAll("button");
 var score = 0;
-var footerEl = document.querySelectorAll(".card-footer");
-
-ansClick.addEventListener("click", function() {
-  if(event.target.matches("button")) {
-    // If correct answer selected increase score
-    if(event.target.matches(".true")) {
-      score++;
-    }
-    // If incorrect answer selected penalize time
-    else if(event.target.matches(".false")) {
-      secondsLeft = secondsLeft - 10;
-    }
-    nextQ(1);
-  }
-});
-
-// Question Loop
 var index = 0;
 var questionArr = [q1El, q2El, q3El, q4El, q5El];
 var currentQ;
 var previousQ;
 
+// Question Loop
 function nextQ(direction) {
   index = index + direction;
   if(index > 4) {
@@ -80,9 +64,34 @@ function nextQ(direction) {
 
     currentQ.style.display = "block";
     previousQ.style.display = "none";
+
+    // Display if answer was correct
+    if(event.target.matches(".true")) {
+      currentQ.lastElementChild.textContent = "Correct!";
+      currentQ.lastElementChild.setAttribute("style", "color: #FCA311; font-style: italic; margin-top: 10px;");
+    }
+    // Display if answer was wrong
+    else if(event.target.matches(".false")) {
+      currentQ.lastElementChild.textContent = "Wrong!";
+      currentQ.lastElementChild.setAttribute("style", "color: #FCA311; font-style: italic; margin-top: 10px;");
+    }
   }
 
 } 
+
+ansClick.addEventListener("click", function() {
+  if(event.target.matches("button")) {
+    // If correct answer selected increase score
+    if(event.target.matches(".true")) {
+      score = score + 10;
+    }
+    // If incorrect answer selected penalize time
+    else if(event.target.matches(".false")) {
+      secondsLeft = secondsLeft - 10;
+    }
+    nextQ(1);
+  }
+});
 
 // Quiz over
 var overEl = document.getElementById("over");
