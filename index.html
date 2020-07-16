@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a class="highscore-link" href="highscores.html">View Highscores</a>
+        <p class="timer">Time: <span id="timer">80</span></p>
+      </header>
+     
+      <div class="card start-page" id="start-page">
+        <div class="card-header">
+          <h2>Coding Quiz Challenge</h2>
+        </div>
+        <div class="card-body">
+          <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by 10 seconds.</p>
+        </div>
+        <div class="card-footer">
+          <button id="start" class="btn">Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="questions">
+        <div class="card" id="q1">
+          <div class="card-header">
+            <h2>Question 1</h2>
+          </div>
+          <div class="card-body">
+            <button id="0" class="btn true">1. Answer</button>
+            <br>
+            <button id="1" class="btn false">2. Answer</button>
+            <br>
+            <button id="2" class="btn false">3. Answer</button>
+            <br>
+            <button id="3" class="btn false">4. Answer</button>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+
+        <div class="card" id="q2">
+          <div class="card-header">
+            <h2>Question 2</h2>
+          </div>
+          <div class="card-body">
+            <button id="0" class="btn true">1. Answer</button>
+            <br>
+            <button id="1" class="btn false">2. Answer</button>
+            <br>
+            <button id="2" class="btn false">3. Answer</button>
+            <br>
+            <button id="3" class="btn false">4. Answer</button>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+
+        <div class="card" id="q3">
+          <div class="card-header">
+            <h2>Question 3</h2>
+          </div>
+          <div class="card-body">
+            <button id="0" class="btn true">1. Answer</button>
+            <br>
+            <button id="1" class="btn false">2. Answer</button>
+            <br>
+            <button id="2" class="btn false">3. Answer</button>
+            <br>
+            <button id="3" class="btn false">4. Answer</button>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+
+        <div class="card" id="q4">
+          <div class="card-header">
+            <h2>Question 4</h2>
+          </div>
+          <div class="card-body">
+            <button id="0" class="btn true">1. Answer</button>
+            <br>
+            <button id="1" class="btn false">2. Answer</button>
+            <br>
+            <button id="2" class="btn false">3. Answer</button>
+            <br>
+            <button id="3" class="btn false">4. Answer</button>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+
+        <div class="card" id="q5">
+          <div class="card-header">
+            <h2>Question 5</h2>
+          </div>
+          <div class="card-body">
+            <button id="0" class="btn true">1. Answer</button>
+            <br>
+            <button id="1" class="btn false">2. Answer</button>
+            <br>
+            <button id="2" class="btn false">3. Answer</button>
+            <br>
+            <button id="3" class="btn false">4. Answer</button>
+          </div>
+          <div class="card-footer">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="over">
+        <div class="card-header">
+          <h2>All Done!</h2>
+        </div>
+        <div class="card-body">
+          <p>Your score is <span id="score"></span></p>
+          <form method="POST">
+            <div class="input-group">
+              <label for="initials">Enter your initials:</label>
+              <input type="text" name="initials" id="initials" />
+              <button id="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

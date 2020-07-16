@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #f9fbfd;
+}
+
+.wrapper {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header {
+  margin-top: 0;
+  font-size: 18px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.highscore-link {
+  float: left;
+  color: purple;
+}
+
+.timer {
+  text-align: end;
+}
+
+.card {
+  background-color: hsl(0, 3%, 82%);
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+.card-header {
+  text-align: left;
+}
+
+.card-body {
+  min-height: 100px;
+  text-align: left !important;
+}
+
+.card-footer {
+  text-align: left;
+}
+
+.start-page .card-header, .card-body, .card-footer {
+  text-align: center;
+}
+
+
+.btn {
+  border: none;
+  background-color: purple;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+  margin: 5px 5px 5px 10px;
+  padding: 5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
