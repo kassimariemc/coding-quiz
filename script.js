@@ -51,17 +51,13 @@ var footerEl = document.querySelectorAll(".card-footer");
 
 ansClick.addEventListener("click", function() {
   if(event.target.matches("button")) {
-    for(i = 2; i < footerEl.length -1; i++) {
-      // If correct answer selected increase score
-      if(event.target.matches(".true")) {
-        score++;
-        footerEl.childNodes[i].textContent = "Correct";
-      }
-      // If incorrect answer selected penalize time
-      else if(event.target.matches(".false")) {
-        secondsLeft = secondsLeft - 10;
-        footerEl.childNodes[i].textContent = "Wrong";
-      }
+    // If correct answer selected increase score
+    if(event.target.matches(".true")) {
+      score++;
+    }
+    // If incorrect answer selected penalize time
+    else if(event.target.matches(".false")) {
+      secondsLeft = secondsLeft - 10;
     }
     nextQ(1);
   }
