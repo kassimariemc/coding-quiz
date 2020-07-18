@@ -12,12 +12,12 @@
   <body>
     
     <header>
-      <ul class="nav justify-content-center">
+      <ul class="nav nav-fill">
         <li class="nav-item">
-          <a class="nav-link active highscore-link" href="highscores.html">View Highscores</a>
+          <a class="nav-link active highscore-link" href="#" id="view-scores">View Highscores</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Time: <span id="timer">80</span></a>
+          <a class="nav-link disabled timer-display" href="#" tabindex="-1" aria-disabled="true">Time: <span id="timer">80</span></a>
         </li>
       </ul>
     </header>
@@ -128,7 +128,7 @@
         </div>
         <div class="card-body">
           <p>Your final score is <span id="score"></span></p>
-          <form method="POST">
+          <form method="POST" id="score-form">
             <div class="input-group">
               <label for="initials">Enter your initials:</label>
               <input type="text" name="initials" id="initials" />
@@ -139,6 +139,19 @@
         <div class="card-footer">
         </div>
       </section>
+
+      <div class="card" id="highscore-page">
+        <div class="card-header">
+          <h2>High Scores</h2>
+        </div>
+        <div class="card-body">
+          <ul id="highscore-list"></ul>
+        </div>
+        <div class="card-footer">
+          <a id="go-back" class="btn" href="index.html" role="button">Go Back</a>
+          <button id="clear-scores" class="btn">Clear Highscores</button>
+        </div>
+      </div>
 
     </main>
     <script src="script.js"></script>
