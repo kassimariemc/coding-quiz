@@ -108,6 +108,19 @@ function quizOver() {
   q5El.style.display = "none";
   overEl.style.display = "block";
   scoreEl.textContent = score;
+
+  // Display if answer was correct
+  if(event.target.matches(".true")) {
+    correctSound.play();
+    overEl.lastElementChild.textContent = "Correct!";
+    overEl.lastElementChild.setAttribute("style", "color: #FCA311; font-style: italic; margin-top: 10px;");
+  }
+  // Display if answer was wrong
+  else if(event.target.matches(".false")) {
+    wrongSound.play();
+    overEl.lastElementChild.textContent = "Wrong!";
+    overEl.lastElementChild.setAttribute("style", "color: #FCA311; font-style: italic; margin-top: 10px;");
+  }
 }
 
 // Highscores Page
