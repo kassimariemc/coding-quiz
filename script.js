@@ -49,8 +49,7 @@ function startQuiz(event) {
   q1El.style.display = "block";
 }
 
-// Loop through questions and keep score
-var score = 0;
+// Loop through questions
 var index = 0;
 var questionArr = [q1El, q2El, q3El, q4El, q5El];
 var currentQ;
@@ -87,12 +86,8 @@ function nextQ(direction) {
 
 ansClick.addEventListener("click", function() {
   if(event.target.matches("button")) {
-    // If correct answer selected increase score
-    if(event.target.matches(".true")) {
-      score = score + 10;
-    }
     // If incorrect answer selected penalize time
-    else if(event.target.matches(".false")) {
+    if(event.target.matches(".false")) {
       secondsLeft = secondsLeft - 10;
     }
     nextQ(1);
@@ -107,7 +102,7 @@ var scoreEl = document.getElementById("score");
 function quizOver() {
   q5El.style.display = "none";
   overEl.style.display = "block";
-  scoreEl.textContent = score;
+  scoreEl.textContent = secondsLeft;
 
   // Display if answer was correct
   if(event.target.matches(".true")) {
@@ -184,7 +179,7 @@ submitBtn.addEventListener("click", function(event) {
   }
 
   // Add new initials and score to array
-  highScoresObj.push({initials: initialsText, topScore: score});
+  highScoresObj.push({initials: initialsText, topScore: secondsLeft});
   
   // Store and re-render
   storeScores();
