@@ -14,3 +14,6 @@ This source code provides a timed coding quiz that stores high scores.
 ## Deployment
 
 [link to deployment](https://kassimariemc.github.io/coding-quiz/)
+
+## Contributors
+<a href="https://github.com/kassimariemc"><img src="https://avatars3.githubusercontent.com/u/66877217?s=460&u=2aefa4a92adc823f1df8656008e78fe8edd0f9b6&v=4" width="5%" style="border-radius:50%"> @kassimariemc</a>
